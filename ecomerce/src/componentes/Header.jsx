@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-
+import moto1  from './imagenes/moto1.jpg';
 
 
 function Header() {
@@ -15,7 +15,12 @@ function Header() {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
-            {/* You could add more here, like a shopping cart icon */}
+            <img
+              className="d-block"
+              src={moto1}
+                alt="First slide"
+                style={{ width: "60px" }}
+            />
           </Nav>
         </Navbar.Collapse>
       </Container>

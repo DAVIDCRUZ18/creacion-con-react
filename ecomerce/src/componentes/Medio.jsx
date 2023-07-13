@@ -1,14 +1,14 @@
 import React from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import carrucel_motos  from './imagenes/carrucel_motos.jpg';
-
-
+import moto1  from './imagenes/moto1.jpg';
+import imagen2 from './imagenes/imagen2.jpg';
 
 export const Medio = () => {
   return (
     <div>
-        <div className="mb-5">
-            <img className="img-fluid mb-3" src={carrucel_motos} alt="portada" width="100%" height="10px" />
+        <div className="mb-6">
+            <img className="img-fluid mb-3" src={carrucel_motos} alt="portada" width="20%" height="10px" />
         </div>
         <div>
             
@@ -17,11 +17,11 @@ export const Medio = () => {
             {/* Contenido de tu componente */}
         </Container>
 
-        <Carousel className="mb-2">
+        <Carousel className="mb-3">
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src={carrucel_motos}
+              className="d-block w-50"
+              src={moto1}
               alt="First slide"
             />
             <Carousel.Caption>
@@ -31,14 +31,14 @@ export const Medio = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src={carrucel_motos.png}
+              className="d-block w-50"
+              src={imagen2}
               alt="Second slide"
             />
 
         <Carousel.Caption>
-            <img className="d-block w-100"
-              src={carrucel_motos.png}
+            <img className="d-block w-50"
+              src={moto1}
               alt="Second slide"
             />
               <h3>Second slide label</h3>

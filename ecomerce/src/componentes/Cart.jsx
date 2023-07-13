@@ -1,43 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Card, ListGroup } from 'react-bootstrap';
 
 function Cart({ cartItems }) {
-  const [productos, setProductos] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    llamarApi();
-  }, []);
-
-  function llamarApi() {
-    axios.get('http://127.0.0.1:4200/Producto/')
-      .then(respuesta => {
-        console.log(respuesta.data);
-        setProductos(respuesta.data);
-      })
-      .catch(error => {
-        console.error(error);
-        setError('Hubo un error al cargar los datos del producto.');
-      });
-  }
 
   return (
-    <div>
-      <div>
-        {error && <p>{error}</p>}
-        {productos.length !== 0 && productos[0].nombre}
-        <button onClick={llamarApi}>Activar API</button>
-      </div>
-      {cartItems.map(item => (
-        <div key={item.product.id}>
-          <p>{item.product.name}</p>
-          <p>{item.count}</p>
-          {/* You could add a "Remove" button here */}
-        </div>
-      ))}
+    <div className="d-flex justify-content-center mt-5">
+      <Card style={{ width: '18rem' }}>
+        <Card.Header>Carrito</Card.Header>
+        <ListGroup variant="flush">
+          {cartItems.map(item => (
+            <ListGroup.Item key={item.product.id}>
+              <p>{item.product.name}</p>
+              <p>Cantidad: {item.count}</p>
+              {/* You could add a "Remove" button here */}
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
+      </Card>
     </div>
   );
 }
 
 export default Cart;
+
 
