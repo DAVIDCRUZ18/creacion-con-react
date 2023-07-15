@@ -1,0 +1,37 @@
+.fondo{
+    color: black;
+}
+.custom-link {
+  color: rgb(0, 0, 0) !important;
+}
+
+.custom-link:hover {
+  color: rgb(162, 54, 54) !important;
+}
+
+.active {
+  font-weight: bold;
+}
+
+#NavTitle {
+    margin: 1em;
+  color: rgb(0, 0, 0) !important;
+}
+.mr-auto {
+  justify-content: center;
+}
+.navbar-dark {
+  background-color: #333;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-link.active {
+  color: #f8f9fa;
+}
+
+#NavTitle {
+  color: #fff;
+}
