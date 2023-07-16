@@ -1,2 +1,17 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+un filter=lfs diff=lfs merge=lfs -text
+nuevo filter=lfs diff=lfs merge=lfs -text
+video
+
+git[[:space:]]pull[[:space:]]origin[[:space:]]master
+git[[:space:]]push[[:space:]]origin[[:space:]]master
+git[[:space:]]push[[:space:]]origin[[:space:]]master
+
+
+git[[:space:]]lfs[[:space:]]track
+git[[:space:]]lfs[[:space:]]track[[:space:]]*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpg
+git[[:space:]]add[[:space:]].
+
+git[[:space:]]commit[[:space:]]-m[[:space:]]Agregué filter=lfs diff=lfs merge=lfs -text
